@@ -5,7 +5,9 @@ def plot_figs(df):
     :param df: plotしたいpandas.Dataframe
     :return:
     """
-    
+    import itertools
+    import matplotlib.pyplot as plt
+    from matplotlib.dates import DateFormatter
     color_iter = itertools.cycle(["#02A8F3", "#33B490", "#FF5151", "#B967C7"])
     n_figs = df.columns.size # columnsの種類数
     fig = plt.figure(figsize=(6, 2.0*n_figs), dpi=100)
